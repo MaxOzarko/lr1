@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozarko PI-20-02</title>
+</head>
+<body>
+    <h1>Визначення пори року</h1>
+    <script>
+        const monthNumber = parseInt(prompt("Введіть номер місяця (1-12):"));
+        if (!isNaN(monthNumber) && monthNumber >= 1 && monthNumber <= 12) {
+            let season = "";
+            switch (monthNumber) {
+                case 12:
+                case 1:
+                case 2:
+                    season = "зима";
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    season = "весна";
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    season = "літо";
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    season = "осінь";
+                    break;
+            }
+            alert(`Пора року: ${season}`);
+        } else {
+            alert("Введено некоректний номер місяця. Введіть число від 1 до 12.");
+        }
+    </script>
+</body>
+</html>

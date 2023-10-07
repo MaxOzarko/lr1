@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozarko PI-20-02</title>
+</head>
+<body>
+    <script>
+        const students = [];
+        while (true) {
+            const lastName = prompt("Введіть прізвище студента:");
+            if (lastName === null || lastName === "") {
+                break;
+            }
+            const firstName = prompt("Введіть ім'я студента:");
+            students.push(`${lastName} ${firstName}`);
+        }
+        document.write("<h2>Список студентів:</h2>");
+        document.write("<ol>");
+        students.forEach(student => {
+            document.write(`<li>${student}</li>`);
+        });
+        document.write("</ul>");
+    </script>
+</body>
+</html>

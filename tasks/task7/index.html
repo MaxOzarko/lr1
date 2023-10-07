@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozarko PI-20-02</title>
+</head>
+<body>
+    <h1>Знаходження найбільшого числа</h1>
+    <script>
+        const number1 = parseFloat(prompt("Введіть перше число:"));
+        if (!isNaN(number1)) {
+            const number2 = parseFloat(prompt("Введіть друге число:"));
+            if (!isNaN(number2)) {
+                const maxNumber = Math.max(number1, number2);
+                alert(`Найбільше число: ${maxNumber}`);
+            } else {
+                alert("Друге число введено некоректно");
+            }
+        } else {
+            alert("Перше число введено некоректно");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozarko PI-20-02</title>
+</head>
+<body>
+    <h1>Таблиця множення</h1>
+    <script>
+        const numRows = 10;
+        const numCols = 10;
+        let tableHTML = '<table border="1"><tr><th>*</th>';
+        for (let col = 1; col <= numCols; col++) {
+            tableHTML += `<th>${col}</th>`;
+        }
+        tableHTML += '</tr>';
+        for (let row = 1; row <= numRows; row++) {
+            tableHTML += `<tr><th>${row}</th>`;
+            for (let col = 1; col <= numCols; col++) {
+                const product = row * col;
+                tableHTML += `<td>${product}</td>`;
+            }
+            tableHTML += '</tr>';
+        }
+        tableHTML += '</table>';
+        document.write(tableHTML);
+    </script>
+</body>
+</html>

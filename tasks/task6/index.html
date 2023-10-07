@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozarko PI-20-02</title>
+</head>
+<body>
+    <h1>Складання двох чисел</h1>
+    <input type="text" id="number1" placeholder="перше число">
+    <input type="text" id="number2" placeholder="друге число">
+    <button id="addButton">Скласти</button>
+    <p id="result"></p>
+    <script>
+        const number1Input = document.getElementById('number1');
+        const number2Input = document.getElementById('number2');
+        const addButton = document.getElementById('addButton');
+        const resultElement = document.getElementById('result');
+        addButton.addEventListener('click', function() {
+            const num1 = parseFloat(number1Input.value);
+            const num2 = parseFloat(number2Input.value);
+            if (!isNaN(num1) && !isNaN(num2)) {
+                const sum = num1 + num2;
+                resultElement.textContent = `Результат: ${sum}`;
+            } else {
+                resultElement.textContent = 'Введіть коректні числа';
+            }
+        });
+    </script>
+</body>
+</html>

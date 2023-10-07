@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozarko PI-20-02</title>
+</head>
+<body>
+    <h1>Кількість студентів</h1>
+    <script>
+        const studentCount = parseInt(prompt("Введіть кількість студентів:"));
+        if (!isNaN(studentCount) && studentCount >= 0) {
+            const students = [];
+            for (let i = 0; i < studentCount; i++) {
+                const lastName = prompt(`Введіть прізвище студента ${i + 1}:`);
+                const firstName = prompt(`Введіть ім'я студента ${i + 1}:`);
+                students.push(`${lastName} ${firstName}`);
+            }
+            const ulElement = document.createElement('ol');
+            students.forEach(student => {
+                const liElement = document.createElement('li');
+                liElement.textContent = student;
+                ulElement.appendChild(liElement);
+            });
+            document.body.appendChild(ulElement);
+        } else {
+            alert("Введено некоректну кількість студентів. Введіть невід'ємне число.");
+        }
+    </script>
+</body>
+</html>
